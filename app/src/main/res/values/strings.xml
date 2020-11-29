@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+    <string name="don_t_have_an_account_sing_up">Don\'t have an account? Sing up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_username">Enter username</string>
+    <string name="sign_up">Sign up</string>
+    <string name="fav_button_content">fav button</string>
+    <string name="artist_image_desc">artist_image_desc</string>
+    <string name="artist_logo_desc">artist_logo_desc</string>
+    <string name="track_name_hint">Track name</string>
+    <string name="track_duration_hint">Duration</string>
+    <string name="tracks_text">Tracks</string>
+    <string name="music_videos_text">Music videos</string>
+    <string name="albums_text">Albums</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="add_to_favs_text">Add to favs</string>
+    <string name="log_out">Log out</string>
+</resources>

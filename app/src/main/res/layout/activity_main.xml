@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <SearchView
+                android:id="@+id/search_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/search_field_style" />
+
+            <ImageButton
+                android:id="@+id/fav_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:background="@null"
+                android:contentDescription="@string/fav_button_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_favourite" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/card_margin"
+            app:cardBackgroundColor="#1F1F23"
+            app:cardCornerRadius="@dimen/card_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/art_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:contentDescription="@string/artist_image_desc"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/album_card_padding">
+
+                    <TextView
+                        android:id="@+id/art_name"
+                        style="@style/TextArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        tools:text="Artist name" />
+
+                    <TextView
+                        android:id="@+id/art_year"
+                        style="@style/TextArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        tools:text="Born year" />
+
+                    <TextView
+                        android:id="@+id/genre_text"
+                        style="@style/TextArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        tools:text="Genre" />
+
+                    <TextView
+                        android:id="@+id/art_website"
+                        style="@style/TextArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        tools:text="Web" />
+
+                    <TextView
+                        android:id="@+id/art_bio"
+                        style="@style/TextArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Bio" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/art_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/artist_logo_desc"
+                    android:scaleType="centerCrop" />
+
+                <Button
+                    android:id="@+id/add_fav_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/search_field_style"
+                    android:text="@string/add_to_favs_text"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/album_header"
+            style="@style/TextArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/albums_text"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/card_margin">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_albums"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/mv_header"
+            style="@style/TextArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/music_videos_text"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/card_margin">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_mvs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
